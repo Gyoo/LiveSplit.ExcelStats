@@ -33,6 +33,7 @@ Dim rngTitles As Range
 Set rng = Range(Cells(LastRow + 1, 2), Cells(LastRow + 1, LastColumn + 1))
 
 Set ResetChart = Charts.Add
+ActiveChart.ChartArea.ClearContents
 ResetChart.Name = "Reset Density"
 For i = 2 To LastColumn + 1
     With ResetChart.SeriesCollection.NewSeries
